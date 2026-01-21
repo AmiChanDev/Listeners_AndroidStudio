@@ -3,4 +3,5 @@
     <string name="home_btn_txt">Default Event Listener</string>
     <string name="click_btn_txt">On Click</string>
     <string name="long_press_btn_txt">Long Press</string>
+    <string name="editText">Edit Text</string>
 </resources>

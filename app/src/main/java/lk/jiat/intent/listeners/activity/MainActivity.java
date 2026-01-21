@@ -1,7 +1,9 @@
 package lk.jiat.intent.listeners.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         longPressOnClickBtn.setOnLongClickListener(v->{
             Toast.makeText(MainActivity.this,"Long Press OnLongClick Event",Toast.LENGTH_LONG).show();
             return true;
+        });
+
+        EditText editText = findViewById(R.id.editText);
+        editText.setOnFocusChangeListener((v, hasFocus) -> {
+            if(hasFocus){
+                v.setBackgroundColor(Color.LTGRAY);
+            }
         });
     }
 }

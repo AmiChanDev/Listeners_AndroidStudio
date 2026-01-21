@@ -39,11 +39,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+//       EditText Focus Event
         EditText editText = findViewById(R.id.editText);
         editText.setOnFocusChangeListener((v, hasFocus) -> {
             if(hasFocus){
                 v.setBackgroundColor(Color.LTGRAY);
             }
+        });
+
+//        EditText Key Press Event
+        EditText editText2= findViewById(R.id.editText2);
+        editText2.setOnKeyListener((v, keyCode, event) -> {
+            Toast.makeText(MainActivity.this,"OnKey Listener",Toast.LENGTH_LONG).show();
+            return false;
         });
     }
 }

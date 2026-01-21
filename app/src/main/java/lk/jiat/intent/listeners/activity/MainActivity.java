@@ -1,15 +1,10 @@
 package lk.jiat.intent.listeners.activity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import lk.jiat.intent.listeners.R;
 
@@ -31,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"OnClick Event",Toast.LENGTH_LONG).show();
         });
 
+//        LongPressOnClick
+        Button longPressOnClickBtn = findViewById(R.id.longPressBtn);
+//        longPressOnClickBtn.setOnClickListener(v->{
+//            Toast.makeText(MainActivity.this,"Long Press OnClick Event",Toast.LENGTH_LONG).show();
+//        });
 
+        longPressOnClickBtn.setOnLongClickListener(v->{
+            Toast.makeText(MainActivity.this,"Long Press OnLongClick Event",Toast.LENGTH_LONG).show();
+            return true;
+        });
     }
 }

@@ -2,4 +2,5 @@
     <string name="app_name">Listeners</string>
     <string name="home_btn_txt">Default Event Listener</string>
     <string name="click_btn_txt">On Click</string>
+    <string name="long_press_btn_txt">Long Press</string>
 </resources>
